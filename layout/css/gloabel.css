@@ -1,3 +1,7 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 :root {
   --back-color: #000324;
   --buttons-color: #323df7;
