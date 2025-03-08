@@ -80,18 +80,17 @@ header .container .menu-button span {
 
 
 header .container aside {
-  position: absolute;
+  position: fixed;
   top: calc(80px + 20px);
-  right: -200px;
+  right: 0;
   background-color: aqua;
   height: calc(100vh - 80px - 20px);
   width: 200px;
   transition: right 1s;
   display: none;
-
 }
 #menu:checked ~ aside {
-  right: 0;
+  right: -200px;
 
 }
 
