@@ -83,12 +83,11 @@ header .container aside {
   background-color: aqua;
   height: calc(100vh - 80px - 20px);
   width: 200px;
-  transform: translateX(0);
-  transition: transform 1s;
+  transition: right 1s;
   display: none;
 }
 #menu:checked ~ aside {
-  transform: translateX(200px);
+  right: -200px;
 
 }
 
