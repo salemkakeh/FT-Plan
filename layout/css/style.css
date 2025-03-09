@@ -91,7 +91,6 @@ header .container aside {
 }
 #menu:checked ~ aside {
   right: -200px;
-
 }
 
 /* START RESPUNSIVE HEADER */
