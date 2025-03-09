@@ -83,16 +83,39 @@ header .container aside {
   position: fixed;
   top: calc(80px + 20px);
   right: 0;
-  background-color: aqua;
   height: calc(100vh - 80px - 20px);
   width: 200px;
   transition: right 1s;
   display: none;
+  background-color: #c7c9ff1c;
+  backdrop-filter: blur(20px);
 }
 #menu:checked ~ aside {
   right: -200px;
 }
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  padding-top: 60px;
+  
+}
+aside nav li {
+  list-style: none;
 
+}
+
+aside nav li a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  color: var(--main-color);
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+
+}
 /* START RESPUNSIVE HEADER */
 
 @media (max-width: 1200px) {
