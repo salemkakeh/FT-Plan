@@ -5,6 +5,7 @@ body {
 header {
   position: sticky;
   top: 0;
+  z-index: 11111;
 }
 header .container {
   display: flex;
@@ -14,7 +15,7 @@ header .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-header .container::after {
+header::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -97,7 +98,7 @@ header .container aside {
   width: 200px;
   transition: right 1s;
   display: none;
-  background-color: #c7c9ff1c;
+  background-color: #22245494;
   backdrop-filter: blur(20px);
 }
 #menu:checked ~ aside {
@@ -176,7 +177,7 @@ aside nav li a {
   }
   header .container aside {
     top: calc(80px + 0px);
-    height: calc(100vh - 80px - 10px);
+    height: calc(100vh - 80px - 0px);
   }
 }
 
@@ -189,7 +190,7 @@ main {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  min-height: calc(120vh);
+  min-height: calc(100vh);
   margin-top: -80px;
   z-index: -1;
   background-image: radial-gradient( #222454   , #000324);
@@ -255,7 +256,6 @@ main .text p {
   }
   main .text {
     padding: 10px;
-    margin-bottom: 40vh;
   }
   main .text h1 {
     font-size: 1.7rem;
@@ -278,7 +278,6 @@ main .text p {
 .features .container {
   padding-bottom: 50px;
   text-align: center;
-  /* padding-top: 300px; */
   padding-top: 50px;
 }
 .features .container > h1 {
@@ -344,3 +343,149 @@ main .text p {
 }
 
 /* END SECTION FETURSE CUSTOMAIZE */
+
+
+
+
+/* START SECTION BOOK CUSTOMAIZE */
+.services {
+  position: relative;
+  padding: 50px;
+}
+.services::after {
+  content: '';
+  position: absolute;
+  background-color: var(--back-color);
+  inset: 0;
+  bottom: 50%;
+  z-index: -1;
+}
+.services::before {
+  content: '';
+  position: absolute;
+  background-color: var(--main-color);
+  inset: 0;
+  top: 50%;
+  z-index: -1;
+}
+.services .container {
+  
+  position: relative;
+  background-color: var(--main-color);
+  box-shadow: 0 50px 50px #00032418;
+  padding: 50px 60px;
+  border-radius: 0 30px 30px ;
+} 
+.services .container > ul {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  position: absolute;
+  top: -50px;
+  left: 0;
+  height: 50px;
+  border-bottom: 1px solid #6969693e;
+  margin: 0;
+  padding: 0;
+}
+.services .container > ul li {
+  list-style-type: none;
+  width: 115px;
+}
+.services .container > ul li a {
+  text-decoration-line: none ;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--main-color);
+  font-weight: 700;
+}
+.services .container > ul li:first-child a {
+  border-radius: 20px 0 0 0 ;
+}
+.services .container > ul li:last-child  a {
+  border-radius: 0 20px  0 0 ;
+}
+
+.services .container > ul li a.active {
+  background-color: var(--buttons-color);
+  color: var(--main-color);
+}
+.services .content .items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.services .content .items .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+.services .content .items .item .text-item {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.services .content .items .item h3 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.services .content .items .item p  {
+  opacity: 60%;
+}
+.services .content .items .item h3, 
+.services .content .items .item p {
+  margin: 0;
+}
+.services .content .items .item span {
+  background-color: #ebebfa;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.services .container .content {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.services .container .content > a {
+  align-self: center;
+  color: var(--main-color);
+  text-decoration-line: none;
+  background-color: var(--buttons-color);
+  padding: 15px 60px;
+  border-radius: 50px;
+  text-transform: capitalize;
+  box-shadow: 0 10px 20px #323cf76c;
+}
+
+
+@media (max-width: 576px)  { 
+
+  .services .content .items .item  {
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .services .content .items .item .text-item {
+    align-items: center;
+    text-align: center;
+  } 
+
+}
+
+/* END SECTION BOOK CUSTOMAIZE */
+
+
+
