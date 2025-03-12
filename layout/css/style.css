@@ -197,7 +197,7 @@ main {
 }
 main > img {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
   z-index: 1111;
@@ -224,7 +224,7 @@ main > h1 {
 main .text {
   color: var(--main-color);
   text-align: center;
-  margin-bottom: 30vh;
+  margin-bottom: 10vh;
 }
 main .text h1 {
   margin: 0;
@@ -357,7 +357,7 @@ main .text p {
   position: absolute;
   background-color: var(--back-color);
   inset: 0;
-  bottom: 50%;
+  bottom: 70%;
   z-index: -1;
 }
 .services::before {
@@ -365,7 +365,7 @@ main .text p {
   position: absolute;
   background-color: var(--main-color);
   inset: 0;
-  top: 50%;
+  top: 30%;
   z-index: -1;
 }
 .services .container {
@@ -473,6 +473,20 @@ main .text p {
 
 @media (max-width: 576px)  { 
 
+  .services .container {
+    border-radius: 0 0 30px 30px;
+  }
+  .services .container ul {
+    width: 100%;
+  }
+  .services .container > ul li {
+    width: auto;
+    flex-grow: 1;
+  }
+  .services .container > ul li a {
+    font-size: 4vw;
+  }
+
   .services .content .items .item  {
     flex-direction: column;
     align-items: center;
@@ -482,10 +496,73 @@ main .text p {
     align-items: center;
     text-align: center;
   } 
-
+  .services .container .content > a {
+    padding: 15px 30px;
+  }
 }
 
+
+
 /* END SECTION BOOK CUSTOMAIZE */
+
+/* START SECTION FLY CUSTOMAIZE */
+
+  .fly {
+    background-color: var(--main-color);
+  }
+  .fly .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+  }
+  .fly .container .left-cont {
+    flex-basis: 50%;
+    flex-grow: 1;
+    position: relative;
+  }
+  .fly .container .left-cont .images {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% , -50%);
+  }
+  .fly .container .left-cont img {
+    border-radius: 200px;
+    border: 10px solid var(--main-color) ;
+  }
+  .fly .container .left-cont img:nth-child(2) {
+    transform: scale(0.9);
+    top: 0;
+    left: -130px;
+    position: absolute;
+  }
+  .fly .container .left-cont img:nth-child(3) {
+    transform: scale(0.9);
+    bottom: 0;
+    right: -140px;
+    position: absolute;
+  }
+  .fly .container .right-cont {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+  @media (max-width: 992px) {
+    .fly .container {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 576px)  { 
+    .fly .container .left-cont  {
+      transform: scale(0.7);
+    }
+  }
+
+/* END SECTION FLY CUSTOMAIZE */
+
+
+
 
 
 
