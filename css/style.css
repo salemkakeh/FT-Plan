@@ -1,0 +1,54 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #202020;
+  color: aliceblue;
+}
+section {
+  counter-reset: file 1;
+}
+section h1 {
+  position: relative;
+  margin-left: 40px;
+}
+section h1::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #0af;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section h1::before {
+  content: 'file ';
+  color: #0af;
+}
+
+.my-sec {
+  height: 100vh;
+  background-color: #a0f;
+}
+
+
+.button {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background-color: #0af;
+  bottom: 20px;
+  right: 20px ;
+  color: #202020;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  cursor: pointer;
+}

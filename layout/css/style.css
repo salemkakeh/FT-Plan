@@ -531,13 +531,13 @@ main .text p {
     border-radius: 200px;
     border: 10px solid var(--main-color) ;
   }
-  .fly .container .left-cont img:nth-child(2) {
+  .fly .container .left-cont div:nth-child(2) {
     transform: scale(0.9);
     top: 0;
     left: -130px;
     position: absolute;
   }
-  .fly .container .left-cont img:nth-child(3) {
+  .fly .container .left-cont div:nth-child(3) {
     transform: scale(0.9);
     bottom: 0;
     right: -140px;
@@ -547,16 +547,87 @@ main .text p {
     flex-grow: 1;
     flex-basis: 50%;
   }
+
+  
+@media (max-width: 1200px) {
+    .fly .container .left-cont .images {
+      transform: translate(-50% , -50%) scale(0.8);
+    }
+}
+
+
   @media (max-width: 992px) {
     .fly .container {
       flex-direction: column;
     }
+    
   }
 
   @media (max-width: 576px)  { 
-    .fly .container .left-cont  {
-      transform: scale(0.7);
+    .fly .container {
+      height: auto;
+      align-items: flex-start;
     }
+    .fly .container .left-cont  {
+      width: 100%;
+    }
+    .fly .container .left-cont .images  {
+      position: relative;
+      align-items: center;
+      transform: translate(0 , 0);
+      display: flex;
+      overflow-x: scroll;
+      width: 100%;
+      scroll-snap-type: x mandatory;
+      counter-reset: counImg;
+      left: auto;
+      top: auto;
+    }
+    .fly .container .left-cont .images::-webkit-scrollbar {
+      width: 0;
+    }
+    .fly .container .left-cont .images div {
+      min-width: 100%;
+      position: relative;
+      transform: scale(1);
+      left: auto;
+      right:auto ;
+    }
+    .fly .container .left-cont .images img {
+      position: static;
+      min-width: 100%;
+      height: 550px;
+      border-radius: 0;
+      border: none;
+      object-fit: cover;
+      scroll-snap-align: start;
+    }
+    .fly .container .left-cont .images div::before {
+      content: counter(counImg);
+      counter-increment: counImg;
+      position: absolute;
+      z-index: 1;
+      width: 60px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      top: 20px;
+      right: 20px;
+      color: #FFF;
+      backdrop-filter: blur(4px);
+    }
+    .fly .container .left-cont .images div::after {
+      position: absolute;
+      content: '';
+      inset: 0;
+      background-image: linear-gradient(#2020206f, transparent);
+      z-index: 0;
+    }
+    
+    
   }
 
 /* END SECTION FLY CUSTOMAIZE */
