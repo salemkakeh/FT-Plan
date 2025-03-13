@@ -573,9 +573,9 @@ main .text p {
     }
     .fly .container .left-cont .images  {
       position: relative;
-      align-items: center;
       transform: translate(0 , 0);
       display: flex;
+      align-items: stretch;
       overflow-x: scroll;
       width: 100%;
       scroll-snap-type: x mandatory;
@@ -592,11 +592,11 @@ main .text p {
       transform: scale(1);
       left: auto;
       right:auto ;
+      display: flex;
     }
     .fly .container .left-cont .images img {
       position: static;
       min-width: 100%;
-      height: 550px;
       border-radius: 0;
       border: none;
       object-fit: cover;
