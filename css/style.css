@@ -52,3 +52,7 @@ section h1::before {
   font-weight: 900;
   cursor: pointer;
 }
+
+.boredr {
+  border-top: 2px dashed red;
+}

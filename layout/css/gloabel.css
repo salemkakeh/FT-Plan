@@ -18,6 +18,20 @@
 }
 
 
+/* buttons */
+.button1 {
+  align-self: center;
+  color: var(--main-color);
+  text-decoration-line: none;
+  background-color: var(--buttons-color);
+  padding: 15px 60px;
+  border-radius: 50px;
+  text-transform: capitalize;
+  box-shadow: 0 10px 20px #323cf76c;
+  display: block;
+}
+
+
 @media (min-width: 576px) {
   .container {
     width: calc(576px - 60px);
