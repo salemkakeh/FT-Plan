@@ -2,7 +2,7 @@ body {
   background-color: var(--back-color);
   overflow-x: hidden;
 }
-header {
+body > header {
   position: sticky;
   top: 0;
   z-index: 11111;
@@ -15,7 +15,7 @@ header .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-header::after {
+body > header::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -588,7 +588,7 @@ main .text p {
     background-color: var(--buttons-color);
   }
 
-  .right-cont ul li:not(:last-child):after {
+  .right-cont ul li:not(:last-child)::after {
     position: absolute;
     content: '';
     height: 120%;
@@ -612,13 +612,15 @@ main .text p {
     }
 }
 @media (max-width: 1200px) {
+  .fly .container {
+    flex-direction: column;
+  }
   .right-cont > h3 {
     font-size: 1.5rem;
   }
   .right-cont ul {
     gap: 10px;
   }
-
 }
 
 
@@ -704,9 +706,3 @@ main .text p {
   }
 
 /* END SECTION FLY CUSTOMAIZE */
-
-
-
-
-
-
