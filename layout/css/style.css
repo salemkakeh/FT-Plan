@@ -708,10 +708,8 @@ main .text p {
 
   .world .container {
     display: flex;
-    align-items: center;
     color: var(--main-color);
-    height: calc(100vh - 80px);
-
+    padding-top: 40px;
   }
 
   .world .left-world {
@@ -735,19 +733,58 @@ main .text p {
     flex-grow: 1;
     align-self: stretch;
     display: flex;
-    justify-content: center;
     align-items: center;
+    position: relative;
+  }
+  .world .right-world .cards {
+    position: relative;
   }
   .world .right-world .cards .card {
     background-color: var(--main-color);
     color: #000;
     width: 400px;
-    padding: 30px;
+    padding: 25px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     overflow: hidden;
+  }
+  .world .right-world .cards .card:not(:nth-of-type(1)) {
+    position: absolute;
+  }
+
+  .world .right-world .cards .card:nth-of-type(1) .circle::after {
+    background-color: #262743;
+  }
+  .world .right-world .cards .card:nth-of-type(2) {
+    z-index: -1;
+    top: 20px;
+    left: 20px;
+    background-color: #262743;
+  }
+  .world .right-world .cards .card:nth-of-type(2) > img,
+  .world .right-world .cards .card:nth-of-type(3) > img,
+  .world .right-world .cards .card:nth-of-type(4) > img {
+    opacity: 0;
+  }
+  .world .right-world .cards .card:nth-of-type(2) .circle::after {
+    background-color: #1a1b39;
+  }
+  .world .right-world .cards .card:nth-of-type(3) {
+    z-index: -2;
+    top: 40px;
+    left: 40px;
+    background-color: #1a1b39;
+  }
+  .world .right-world .cards .card:nth-of-type(3) .circle::after {
+    background-color: #0e0f2e;
+  }
+  .world .right-world .cards .card:nth-of-type(4) {
+    z-index: -3;
+    background-color: #0e0f2e;
+    top: 60px;
+    left: 60px;
   }
   .world .right-world .cards .card header {
     display: flex;
@@ -818,20 +855,28 @@ main .text p {
   .world .right-world .circle::before { 
     content: '';
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--back-color);
     top: 50%;
     transform: translateY(-50%);
-    left: -60px;
+    left: -45px;
   }
   .world .right-world .circle::after {
     left: auto;
-    right: -60px;
+    right: -45px;
   }
 
   .world .right-world .cards .card > img {
     margin-top: 20px;
+  }
+
+  .world .right-world .left-moving {
+    background-color: red;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    
   }
 /* EMD SECTION WORLD CUSTOMAIZE */
