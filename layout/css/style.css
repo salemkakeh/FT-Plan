@@ -1083,7 +1083,7 @@ main .text p {
       font-size: 12px;
     }
 
-  
+
   .world .right-world .cards .card:nth-of-type(2) {
     top: 10px;
     left: 10px;
@@ -1121,7 +1121,142 @@ main .text p {
   .world .right-world .left-moving .medile-move hr { 
     display: none;
   }
-  }
+}
 
 
 /* EMD SECTION WORLD CUSTOMAIZE */
+
+/* START SECTION BEST-TRAVELS CUSTOMAIZE */
+.best-travels {
+
+  background-color: var(--main-color);
+}
+.best-travels .container {
+  padding-top: 40px;
+  padding-bottom: 40PX;
+}
+.best-travels .container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+  .best-travels .container .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 30PX;
+
+  }
+  .best-travels .container .cards .card {
+    height: 350px;
+    background-image: url(../images/city2.jpg);
+    background-size: cover;
+    padding: 20px;
+    flex-basis: 250px;
+    border-radius: 150px;
+    position: relative;
+  }
+  .best-travels .container .cards .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: brightness(70%);
+    z-index: 0;
+    border-radius: 150px;
+  }
+  .best-travels .container .cards .card:nth-child(2) {
+    background-image: url(../images/city1.jpg);
+  }
+  .best-travels .container .cards .card:nth-child(3) {
+    background-image: url(../images/city3.jpg);
+  }
+  .best-travels .container .cards .card:nth-child(4) {
+    background-image: url(../images/city4.jpg);
+  }
+  .best-travels .container .cards .bottom-card {
+
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    left: -1px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+  }
+  .best-travels .container .cards .bottom-card img {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .best-travels .container .cards .bottom-card .image-bottom {
+    width: 50px;
+    height: 50px;
+    background-color: #f0a;
+    background-image: url(../images/airpot2.jpg);
+    margin-top: -70px;
+    border-radius: 50% ;
+    background-size: cover;
+    border-top-width: 15px;
+    box-sizing: content-box;
+    position: relative;
+    z-index: 1;
+    
+
+  }
+  .best-travels .container .cards .bottom-card h2 {
+    font-size: 1.2rem;
+
+    margin-bottom: 4px;
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+
+  }
+  .best-travels .container .cards .bottom-card a {
+    font-size: 0.8rem;
+    color: #5b5b5b;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+
+  }
+  .best-travels .container .cards .bottom-card a:hover {
+    text-decoration: underline;
+    color: var(--buttons-color);
+  }
+
+
+  @media (max-width: 576px) {
+    .best-travels .container .cards .card {
+      /* padding-bottom: 0; */
+    }
+    
+    .best-travels .container .cards .bottom-card {
+      /* justify-content: flex-end; */
+      /* padding-bottom: 30px; */
+    }
+    .best-travels .container .cards .bottom-card .image-bottom {
+      width: 55px;
+      height: 55px;
+    }
+    .best-travels .container .cards .bottom-card h2 {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 346px) {
+    
+    .best-travels .container .cards .bottom-card {
+      justify-content: flex-end;
+      padding-bottom: 30px;
+    }
+  }
+
+/* END SECTION BEST-TRAVELS CUSTOMAIZE */
