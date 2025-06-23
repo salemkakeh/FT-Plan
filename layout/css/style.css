@@ -1497,3 +1497,31 @@ main .text p {
   }
   
 /* END FOOTER  CUSTOMAIZE */
+
+
+
+
+
+#move {
+  background-color: var(--buttons-color);
+  width: 55px;
+  height: 55px;
+  border: none;
+  font-size: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 11111;
+  opacity: 70%;
+  transition: .2s;
+  display: none;
+}
+#move:hover {
+  opacity: 100%;
+}
